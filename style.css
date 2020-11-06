@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100&display=swap');
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    display: flex;
+    background-color: hsl(0, 0%, 98%);
+    padding: 1rem;
+    justify-content: space-between;
+    position: relative;
+    /* position: -webkit-sticky; */
+    /* top: -1px; */
+    z-index: 10;
+}
+
+header img {
+    display: inline-block;
+}
+
+header ul {
+    display: none;
+}
+
+header ul li {
+    list-style-type: none;
+}
+
+
+
+/* MAIN ONE */
+
+main .main-one {
+    /* position: relative; */
+    background-color: hsl(0, 0%, 98%);
+    font-size: 20px;
+    line-height: 1.7rem;
+}
+
+main .main-one .main-one-img {
+    width: 100%;
+    box-sizing: border-box;
+    background: url(images/bg-intro-mobile.svg) no-repeat top;
+    background-size: cover;
+    height: 19rem;
+}
+
+main .main-one .main-one-img img {
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    position: absolute;
+    /* position: -webkit-sticky; */
+    top: -80px;
+    z-index: 2;
+}
+
+.main-one .main-one-text {
+    padding: 5rem .5rem;
+    text-align: center;
+}
+
+.main-one .main-one-text h1 {
+    line-height: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.main-one .main-one-text .space-up {
+    margin-top: 3rem;
+    box-sizing: border-box;
+}
+
+.invite {
+    padding: .8rem 3rem;
+    text-decoration: none;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 50px;
+    background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
+}
+
+.main-one .phone-img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.main-one .phone-img img {
+    width: 100%;
+    /* position: absolute;
+    top: 0; */
+}
+
+
+
+
+/* MAIN TWO */
+
+main .main-two {
+    line-height: 1.7rem;
+    font-size: 20px;
+    padding: 3rem .5rem;
+    text-align: center;
+    background-color: hsl(220, 16%, 96%);
+}
+
+main .main-two .main-two-top h1 {
+    margin-bottom: 1.5rem;
+    line-height: 3rem;
+}
+
+main .main-two .main-two-bottom div h2,
+main .main-two .main-two-bottom div p {
+    margin-top: 1.5rem;
+}
+
+main .main-two .main-two-bottom div {
+    padding: 2rem 0;
+}
+
+
+
+/* MAIN THREE */
+
+main .main-three {
+    padding: 3rem 0 5rem 0;
+    background-color: hsl(0, 0%, 98%);
+    line-height: 1.7rem;
+}
+
+main .main-three .main-three-top {
+    text-align: center;
+    padding: 2rem;
+}
+
+main .main-three .main-three-bottom {
+    padding: 0 1rem;
+}
+
+main .main-three .main-three-bottom .three-bottom-text {
+    height: 50%;
+}
+
+main .main-three .main-three-bottom .margin-bottom:not(:last-child) {
+    margin-bottom: 2rem;
+}
+
+main .main-three .main-three-bottom .margin-bottom div {
+    margin: 0;
+}
+
+main .main-three .main-three-bottom div img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+main .main-three .main-three-bottom .three-bottom-text {
+    padding: 1rem 1rem 3rem 1rem;
+    background-color: #fff;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main .main-three .main-three-bottom .three-bottom-text h3,
+main .main-three .main-three-bottom .three-bottom-text p {
+    padding-top: 1rem;
+}
+
+
+
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+    
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
