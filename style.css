@@ -57,7 +57,7 @@ main .main-one .main-one-img {
 
 main .main-one .main-one-img img {
     display: inline-block;
-    width: 100%;
+    /* width: 100%; */
     max-width: 100%;
     position: absolute;
     /* position: -webkit-sticky; */
@@ -80,7 +80,7 @@ main .main-one .main-one-img img {
     box-sizing: border-box;
 }
 
-.invite {
+.signup {
     padding: .8rem 3rem;
     text-decoration: none;
     color: white;
@@ -176,6 +176,22 @@ main .main-three .main-three-bottom .three-bottom-text {
 main .main-three .main-three-bottom .three-bottom-text h3,
 main .main-three .main-three-bottom .three-bottom-text p {
     padding-top: 1rem;
+}
+
+footer {
+    color: white;
+    background-color: hsl(233, 26%, 24%);
+}
+
+footer .logo {
+    background-clip: text;
+    color: white;
+    /* background-color: white; */
+}
+
+footer > div {
+    display: flex;
+    flex-flow: column nowrap;
 }
 
 
