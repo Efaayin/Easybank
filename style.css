@@ -8,19 +8,21 @@
     padding: 0;
 }
 
+html {
+    font-size: .625rem;
+}
+
 body {
     font-family: 'Public Sans', sans-serif;
-    font-size: 18px;
+    /* font-size: .625rem; */
 }
 
 header {
     display: flex;
     background-color: hsl(0, 0%, 98%);
-    padding: 1rem;
+    padding: 1.7rem;
     justify-content: space-between;
     position: relative;
-    /* position: -webkit-sticky; */
-    /* top: -1px; */
     z-index: 10;
 }
 
@@ -43,49 +45,70 @@ header ul li {
 main .main-one {
     /* position: relative; */
     background-color: hsl(0, 0%, 98%);
-    font-size: 20px;
-    line-height: 1.7rem;
+    font-size: 1.8rem;
+    line-height: 3rem;
 }
 
 main .main-one .main-one-img {
     width: 100%;
     box-sizing: border-box;
-    background: url(images/bg-intro-mobile.svg) no-repeat top;
+    background: url(images/bg-intro-mobile.svg) no-repeat;
+    background-position: center;
     background-size: cover;
-    height: 19rem;
+    /* height: 50rem; */
+    padding: 50% 0;
 }
 
 main .main-one .main-one-img img {
     display: inline-block;
-    /* width: 100%; */
     max-width: 100%;
+    max-height: 100%;
     position: absolute;
-    /* position: -webkit-sticky; */
-    top: -80px;
+    top: -10%;
     z-index: 2;
 }
 
+/* @media only screen and (min-width: 600px) {
+    main .main-one .main-one-img img {
+        display: inline-block;
+        max-width: 100%;
+        height: 65%;
+        position: absolute;
+        top: -10%;
+        z-index: 2;
+    }    
+} */
+
 .main-one .main-one-text {
-    padding: 5rem .5rem;
+    padding: 9rem 1rem;
     text-align: center;
 }
 
 .main-one .main-one-text h1 {
-    line-height: 3rem;
+    line-height: 4.5rem;
     margin-bottom: 1.5rem;
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
+}
+
+.main-one .main-one-text p {
+    color: hsl(233, 8%, 62%);
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
 .main-one .main-one-text .space-up {
-    margin-top: 3rem;
+    margin-top: 4rem;
     box-sizing: border-box;
 }
 
 .signup {
-    padding: .8rem 3rem;
+    padding: 1.3rem 6rem;
+    font-weight: 700;
     text-decoration: none;
     color: white;
     box-sizing: border-box;
-    border-radius: 50px;
+    border-radius: 6.2rem;
     background: linear-gradient(to right, hsl(136, 65%, 51%), hsl(192, 70%, 51%));
 }
 
@@ -107,24 +130,89 @@ main .main-one .main-one-img img {
 
 main .main-two {
     line-height: 1.7rem;
-    font-size: 20px;
     padding: 3rem .5rem;
     text-align: center;
     background-color: hsl(220, 16%, 96%);
 }
 
-main .main-two .main-two-top h1 {
+main .main-two .main-two-top h2 {
     margin-bottom: 1.5rem;
-    line-height: 3rem;
+    line-height: 4.5rem;
+    font-size: 3.5rem;
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
 }
 
-main .main-two .main-two-bottom div h2,
-main .main-two .main-two-bottom div p {
+main .main-two .main-two-top p {
+    font-size: 1.5rem;
+    font-weight: 700;
     margin-top: 1.5rem;
+    color: hsl(233, 8%, 62%);
+    line-height: 2.5rem;
+    padding: 0 2rem;
 }
 
-main .main-two .main-two-bottom div {
-    padding: 2rem 0;
+main .main-two .main-two-bottom {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+@media (max-width: 899px) {
+    main .main-two .main-two-bottom {
+        flex-flow: row wrap;
+    }
+}
+
+@media (min-width: 789px) {
+    main .main-two {
+        text-align: left;
+        padding: 6rem 5rem;
+    }
+
+    main .main-two .main-two-bottom p {
+        padding: 0;
+    }
+
+    main .main-two .main-two-top p {
+        padding: 0;
+    }
+}
+
+main .main-two .main-two-bottom div h4 {
+    margin-top: 2.5rem;
+    color: hsl(233, 26%, 24%);
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+main .main-two .main-two-bottom div p {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    color: hsl(233, 8%, 62%);
+    line-height: 2.5rem;
+    padding: 0;
+}
+
+main .main-two .main-two-bottom div div {
+    padding: 4rem 1rem;
+}
+
+.main-two-bottom-one,
+.main-two-bottom-two {
+    display: flex;
+}
+
+.main-two-bottom-one div,
+.main-two-bottom-two div {
+    flex-basis: 50%;
+}
+
+@media (max-width: 460px) {
+    .main-two-bottom-one,
+    .main-two-bottom-two {
+        flex-flow: column;
+    }
 }
 
 
@@ -135,22 +223,65 @@ main .main-three {
     padding: 3rem 0 5rem 0;
     background-color: hsl(0, 0%, 98%);
     line-height: 1.7rem;
+    box-sizing: border-box;
 }
 
 main .main-three .main-three-top {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem;
+}
+
+main .main-three .main-three-top h2 {
+    margin-bottom: 1.5rem;
+    font-size: 3.5rem;
+    color: hsl(233, 26%, 24%);
+    font-weight: 400;
 }
 
 main .main-three .main-three-bottom {
-    padding: 0 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 0 3rem;
 }
 
-main .main-three .main-three-bottom .three-bottom-text {
-    height: 50%;
+@media (min-width: 555px) and (max-width: 899px) {
+    main .main-three .main-three-bottom > div {
+        display: flex;
+        justify-content: space-between;      
+    }
+
+    main .main-three .main-three-bottom > div div {
+        flex-basis: 45%;
+    }
+
+    main .main-three .main-three-bottom > div .margin-bottom {
+        margin-bottom: 0;
+    }
 }
 
-main .main-three .main-three-bottom .margin-bottom:not(:last-child) {
+@media (min-width: 900px) {
+    main .main-three .main-three-bottom {
+        display: flex;
+        flex-flow: row nowrap;
+        padding: 0 3rem;
+    }
+
+    main .main-three .main-three-bottom > div {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    main .main-three .main-three-bottom > div div {
+        flex-basis: 45%;
+        padding: 0;
+    }
+}
+
+main .main-three .main-three-bottom > div {
+    margin-bottom: 2rem;
+}
+
+main .main-three .main-three-bottom > div .margin-bottom:not(:last-child) {
     margin-bottom: 2rem;
 }
 
@@ -161,41 +292,108 @@ main .main-three .main-three-bottom .margin-bottom div {
 main .main-three .main-three-bottom div img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: 20rem;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 }
 
 main .main-three .main-three-bottom .three-bottom-text {
-    padding: 1rem 1rem 3rem 1rem;
+    padding: 2.5rem 2.5rem 3rem 2.5rem;
     background-color: #fff;
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: .5rem;
+    border-bottom-right-radius: .5rem;
+    color: hsl(233, 8%, 62%);
+}
+
+main .main-three .main-three-bottom .three-bottom-text small {
+    font-size: 1.1rem;
+}
+
+main .main-three .main-three-bottom .three-bottom-text h3 {
+    font-size: 1.7rem;
+    color: hsl(233, 26%, 24%);
+}
+
+main .main-three .main-three-bottom .three-bottom-text p {
+    font-size: 1.3rem;
 }
 
 main .main-three .main-three-bottom .three-bottom-text h3,
 main .main-three .main-three-bottom .three-bottom-text p {
-    padding-top: 1rem;
+    padding-top: 1.5rem;
 }
+
+
+
+
+/* FOOTER */
 
 footer {
     color: white;
     background-color: hsl(233, 26%, 24%);
 }
 
+footer a {
+    text-decoration: none;
+    color: hsl(220, 16%, 96%);
+}
+
+footer .footer-container {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    font-size: 1.5rem;
+    margin: 0 auto;
+    padding: 4rem 0;
+    /* border: 1px solid red; */
+}
+
 footer .logo {
     background-clip: text;
     color: white;
-    /* background-color: white; */
+    background-color: white;
 }
 
-footer > div {
+footer .footer-container > div {
     display: flex;
     flex-flow: column nowrap;
+    text-align: center;
+    /* border: 1px solid green; */
 }
 
+footer .footer-one  {
+    width: 100%;
+    /* border: 1px solid green; */
+}
 
+footer .footer-container .social-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    width: 50%;
+    margin: 2rem auto;
+}
 
+footer .footer-container > div p {
+    padding: 1rem;
+}
+
+footer .footer-container > .footer-four {
+    margin-top: 3rem;
+}
+
+footer .footer-container > .footer-four p:last-child {
+    margin-top: 2rem;
+    color: hsl(233, 8%, 62%);
+}
+
+/* footer > div p:not(:last-child) {
+    margin-bottom: 2rem;
+} */
+
+footer img {
+    display: inline-block;
+}
 
 .attribution { 
     font-size: 11px; 
